@@ -10,21 +10,29 @@ public class DBAccess : MonoBehaviour {
 	void Start () {
  
         DBManager mDBM = new DBManager();
-        int[] temp = mDBM.GetPlayer();
+        List<DBObject> temp = mDBM.GetDB("player");
 
         Debug.Log("getPlayer");
-        Debug.Log(temp[0]);
-        Debug.Log(temp[1]);
-        Debug.Log(temp[2]);
-        Debug.Log(temp[3]);
-
-        List<Spirit> stemp = mDBM.GetSpirits();
-
-        Debug.Log("size : " + stemp.Count);
-        foreach(Spirit item in stemp)
+        foreach (DBObject item in temp)
         {
-            Debug.Log(item.Name + ": level - " + item.Level + ", cool - " + item.CoolTime);
+            Debug.Log(item.Name + ": value - " + item.Value1);
+        }
+
+        List<DBObject> stemp = mDBM.GetDB("spirit");
+
+        Debug.Log("spirit");
+        foreach(DBObject item in stemp)
+        {
+            Debug.Log(item.Name + ": level - " + item.Value1 + ", cool - " + item.Value2);
         }
         Debug.Log(stemp.ToArray()[1].Name);
+
+        mDBM.SetDB("player", "attack", 1, 9999);
+
+        Debug.Log("re-getPlayer");
+        foreach (DBObject item in temp)
+        {
+            Debug.Log(item.Name + ": value - " + item.Value1);
+        }
     }
 }

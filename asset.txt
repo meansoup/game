@@ -1,0 +1,27 @@
+[character]
+2D Outline
+Unity Anima2D
+Cartoon FX Free
+
+[effect]
+Unity Particle Pack
+Particle effects 1
+Particle Ribbon
+KY Magic Effects Free
+
+[materials]
+Yughues Free Ground Materials
+Yughues Free Metal Materials
+Yughues Free Concrete Materials
+
+[UI]
+Modern UI Pack
+Simple UI
+Unity sample UI
+  Scen View UI Camera
+
+[healthBar]
+RPG Unitframes
+
+
+https://www.youtube.com/watch?v=87R0PziLDJ0
